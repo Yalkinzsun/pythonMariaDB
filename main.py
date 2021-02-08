@@ -64,7 +64,7 @@ if __name__ == '__main__':
             #shutil.copy2(f'./files/{files_count[i]}', f'C:\\Users\\Yalki\\Documents\\files\\new{files_count[i]}')
             shutil.copy2(f'./files/{files_count[i]}', f'/root/test/new{files_count[i]}')
         end_copy_time = time.time()
-        print(f'Время копирования {(files_count_len / 3) * p} файлов в вайловую систему: {end_copy_time - start_copy_time} сек.')
+        print(f'Время копирования {(files_count_len / 3) * p} файлов в файловую систему: {end_copy_time - start_copy_time} сек.')
 
 
         start_read_time = time.time()
