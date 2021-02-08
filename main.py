@@ -27,7 +27,7 @@ if __name__ == '__main__':
     try:
         conn = mariadb.connect(
             user="root",
-            password="king0630uyu850xz",
+            password="1234",
             host="127.0.0.1",
             port=3306,
             database="TESTS"
@@ -61,7 +61,8 @@ if __name__ == '__main__':
 
         start_copy_time = time.time()
         for i in range(0, int(files_count_len / 3) * p):
-            shutil.copy2(f'./files/{files_count[i]}', f'C:\\Users\\Yalki\\Documents\\files\\new{files_count[i]}')
+            #shutil.copy2(f'./files/{files_count[i]}', f'C:\\Users\\Yalki\\Documents\\files\\new{files_count[i]}')
+            shutil.copy2(f'./files/{files_count[i]}', f'/root/test/new{files_count[i]}')
         end_copy_time = time.time()
         print(f'Время копирования {(files_count_len / 3) * p} файлов в вайловую систему: {end_copy_time - start_copy_time} сек.')
 
@@ -77,10 +78,3 @@ if __name__ == '__main__':
         print("-" * 15)
     conn.close()
 
-# os.mkdir("/home/yalkinzsun/test")
-# file_name = "/home/yalkinzsun/{files_count[i-1]}"
-
-# os.rename(f'./files/{files_count[i]}', f'C:\\Users\\Yalki\\Documents\\files\\new{files_count[i]}')
-# shutil.move(f'./files/{files_count[i]}', f'C:\\Users\\Yalki\\Documents\\files\\new{files_count[i]}')
-
-# shutil.copy2(f'./files/{files_count[i]}', f'/home/root/test/new{files_count[i]}')
