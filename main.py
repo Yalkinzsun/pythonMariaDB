@@ -21,7 +21,7 @@ def file_generator(num_of_files, content_size):
 
 
 if __name__ == '__main__':
-    # file_generator(900, 1000000)
+    file_generator(900, 1000000)
     # 2009-10-04 22:23:00
 
     try:
